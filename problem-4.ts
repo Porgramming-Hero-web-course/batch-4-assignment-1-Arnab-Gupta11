@@ -13,9 +13,11 @@
   function calculateShapeArea(shape: Shape): number {
     if (shape.shape === "circle") {
       const radius = shape.radius;
-      return 3.1416 * radius * radius;
+      let area = Math.PI * radius * radius;
+      return parseFloat(area.toFixed(2));
     } else {
-      return shape.height * shape.width;
+      let area = shape.height * shape.width;
+      return parseFloat(area.toFixed(2));
     }
   }
 }
